@@ -1,0 +1,26 @@
+<?php # Script 3.7 - index.php #2
+
+// This function outputs theoretical HTML
+// for adding ads to a Web page.
+function create_ad() {
+  echo '<div class="alert alert-info" role="alert"><p>This is Big Mike!</p></div>';
+} // End of the function definition.
+
+$page_title = 'Welcome to Lab 5!';
+include('includes/header.html');
+
+// Call the function:
+create_ad();
+?>
+
+<div class="page-header"><h1>Database</h1></div>
+<p>The acronym CRUD refers to all of the major functions that are implemented in relational database applications</p>
+
+<p>Each letter in the acronym can map to a standard Structured Query Language (SQL) statement, Hypertext Transfer Protocol (HTTP) method (this is typically used to build RESTful APIs[4]) or Data Distribution Service (DDS) operation</p>
+
+<?php
+// Call the function again:
+create_ad();
+
+include('includes/footer.html');
+?>

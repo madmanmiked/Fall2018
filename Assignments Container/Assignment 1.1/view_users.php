@@ -10,7 +10,7 @@ echo '<h1>View the Registered Users</h1>';
 require('mysqli_connect.php'); // Connect to the db.
 
 // Make the query:
-$q = "SELECT CONCAT(last_name, ', ', first_name) AS name INNER JOIN messages.user_id, messages.subject, messages.body,messages.date_entered, users.username FROM messages,users WHERE messages.user_id = '1';
+$q = "SELECT CONCAT(last_name, ', ', first_name) AS User_Handle, INNER JOIN USERNAME(users.first_name, users.last_name = 1)";
 $r = @mysqli_query($dbc, $q); // Run the query.
 
 // Count the number of returned rows:
@@ -34,7 +34,7 @@ if ($num > 0) { // If it ran OK, display the records.
 
 	// Fetch and print all the records:
 	while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
-		echo '<tr><td align="left">' . $row['name'] . '</td><td align="left">' . $row['dr'] . '</td></tr>
+		echo '<tr><td align="left">' . $row['User_Handle'] . '</td><td align="left">' . $row['dr'] . '</td></tr>
 		';
 	}
 
